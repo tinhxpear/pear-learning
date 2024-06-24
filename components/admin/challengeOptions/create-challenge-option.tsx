@@ -65,6 +65,12 @@ const CreateChallengeOption = ({challengeId, typeQuestion} : Props) => {
                   alert(`ERROR! ${error.message}`);
                 }}
               />
+              Or
+              <Input
+                  id="text"
+                  className="col-span-3"
+                  onChange={(event) => setImageSrc(event.target.value)}
+                />
             </div>
               
 
@@ -81,6 +87,12 @@ const CreateChallengeOption = ({challengeId, typeQuestion} : Props) => {
                   onUploadError={(error: Error) => {
                     alert(`ERROR! ${error.message}`);
                   }}
+                />
+                Or
+              <Input
+                  id="text"
+                  className="col-span-3"
+                  onChange={(event) => setAudioSrc(event.target.value)}
                 />
               </div>
               <div className="grid grid-cols-4 items-center gap-4">

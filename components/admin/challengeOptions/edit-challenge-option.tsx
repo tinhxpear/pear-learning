@@ -1,13 +1,10 @@
 "use client";
-import { updateChallengeAction } from '@/actions/challenge-edit';
 import { updateChallengeOptionAction } from '@/actions/challenge-options-edit';
 import { Button } from '@/components/ui/button'
-import { Checkbox } from '@/components/ui/checkbox';
 import { Dialog, DialogContent, DialogDescription, DialogFooter, DialogHeader, DialogTitle, DialogTrigger } from '@/components/ui/dialog'
 import { Input } from '@/components/ui/input'
 import { Label } from '@/components/ui/label'
-import { Select, SelectContent, SelectGroup, SelectItem, SelectLabel, SelectTrigger, SelectValue } from '@/components/ui/select';
-import { challengeOptions, challenges, lessons} from '@/db/schema';
+import { challengeOptions} from '@/db/schema';
 import { UploadButton } from '@/utils/uploadthing';
 import { useRouter } from 'next/navigation';
 import React, { useState } from 'react'
@@ -87,6 +84,12 @@ const EditChallengeOption = ({challengeOption} : Props) => {
                     alert(`ERROR! ${error.message}`);
                   }}
                 />
+              Or
+              <Input
+                  id="text"
+                  className="col-span-3"
+                  onChange={(event) => setAudioSrc(event.target.value)}
+                />
               </div>
 
               <div className="grid grid-cols-2 items-center gap-4">
@@ -102,6 +105,12 @@ const EditChallengeOption = ({challengeOption} : Props) => {
                   onUploadError={(error: Error) => {
                     alert(`ERROR! ${error.message}`);
                   }}
+                />
+                Or
+              <Input
+                  id="text"
+                  className="col-span-3"
+                  onChange={(event) => setAudioSrc(event.target.value)}
                 />
               </div>
               <div className="grid grid-cols-4 items-center gap-4">
