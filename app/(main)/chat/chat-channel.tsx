@@ -3,7 +3,7 @@ import { Channel, ChannelHeader, MessageInput, MessageList, Thread, Window } fro
 
 const ChatChannel = () => {
   return (
-    <div className="h-full w-full">
+    <div className="h-full w-full overflow-scroll">
         <Channel>
             <Window>
                 <ChannelHeader />
