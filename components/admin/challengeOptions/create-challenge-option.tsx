@@ -51,9 +51,7 @@ const CreateChallengeOption = ({challengeId, typeQuestion} : Props) => {
                   onChange={(event) => setText(event.target.value)}
                 />
               </div>
-              {typeQuestion === "SELECT" 
-              
-              && <div className="grid grid-cols-2 items-center gap-4">
+              <div className="grid grid-cols-2 items-center gap-4">
               <Label htmlFor="image" className="text-right">
                 Image
               </Label>
@@ -67,7 +65,7 @@ const CreateChallengeOption = ({challengeId, typeQuestion} : Props) => {
                   alert(`ERROR! ${error.message}`);
                 }}
               />
-            </div>}
+            </div>
               
 
               <div className="grid grid-cols-2 items-center gap-4">

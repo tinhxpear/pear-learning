@@ -1,11 +1,7 @@
-import { getChallengeByLessonId } from "@/actions/challenge-edit";
 import { getChallengeOptionByChallengeId } from "@/actions/challenge-options-edit";
 import CreateChallengeOption from "@/components/admin/challengeOptions/create-challenge-option";
 import DeleteChallengeOption from "@/components/admin/challengeOptions/delete-challenge-options";
 import EditChallengeOption from "@/components/admin/challengeOptions/edit-challenge-option";
-import CreateChallenge from "@/components/admin/challenges/create-challenge";
-import DeleteChallenge from "@/components/admin/challenges/delete-challenge";
-import EditChallenge from "@/components/admin/challenges/edit-challenge";
 import { Button } from "@/components/ui/button";
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table";
 import { getChallengeById } from "@/db/queries";
