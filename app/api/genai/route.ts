@@ -21,7 +21,7 @@ export async function POST(req: Request, res: Response) {
     promptWithParts = [prompt, ...imageParts];
   } else {
 
-    modelName = "gemini-1.5-pro";
+    modelName = "gemini-1.0-pro";
     promptWithParts = buildGoogleGenAIPrompt(messages);
   }
 
