@@ -25,6 +25,7 @@ export async function POST(req: Request, res: Response) {
     promptWithParts = buildGoogleGenAIPrompt(messages);
   }
 
+  
   const genAI = new GoogleGenerativeAI(process.env.GOOGLE_API_KEY!);
   const model = genAI.getGenerativeModel({
     model: modelName,
